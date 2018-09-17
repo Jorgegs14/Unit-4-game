@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Collector Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="title">
+        <h1>Crystals Collector!</h1>
+    </div>
+
+    <div id="instructions">
+        <p>
+            You will be given a random number at the start of the game.
+            <br><br>
+            There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+            <br><br>
+            You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
+            <br><br>
+            The value of each crystal is hidden from you until you click on it.
+            <br><br>
+            Each time when the game starts, the game will change the values of each crystal.
+        </p>
+    </div>
+
+    <div id="random-number">12</div>
+
+    <div class="container">
+        <div id="game-result"></div>
+
+        <div class="counter">
+            Wins: <span id="win-counter">0</span>
+        </div>
+
+        <div class="counter">
+            Losses: <span id="loss-counter">0</span>
+        </div>
+    </div>
+
+    <div class="image-wrapper">
+        <div class="image-container">
+            <img src="assets/images/mind-stone.jpg" class="stone-image" id="image-1">
+        </div>
+        <div class="image-container">
+            <img src="assets/images/reality-stone.jpg" class="stone-image" id="image-2">
+        </div>
+        <div class="image-container">
+            <img src="assets/images/power-stone.jpg" class="stone-image" id="image3">
+        </div>
+        <div class="image-container">
+            <img src="assets/images/time-stone.jpg" class="stone-image" id="image-4">
+        </div>
+    </div>
+
+    <div class="text-score">
+        <p>Your total score is:</p>
+    </div>
+
+    <div class="game-score" id="score-number">0</div>
+
+    <script>
+        $(document).ready(function () {
+            
+            var game = {
+                wins: 0,
+                losses: 0,
+                randomNumber: 0,
+                stone1: 0,
+                stone2: 0,
+                stone3: 0,
+                stone4: 0,
+                score: 0,
+
+                startGame: function () {
+                    this.score = 0;
+                    this.randomNumber = Math.floor(Math.random() * 120) + 19;
+                    console.log("randomNumber: " + this.randomNumber);
+                    this.stone1 = Math.floor(Math.random() * 12) + 1;
+                    console.log("stone1: " + this.stone1);
+                    this.stone2 = Math.floor(Math.random() * 12) + 1;
+                    console.log("stone1: " + this.stone2);
+                    this.stone3 = Math.floor(Math.random() * 12) + 1;
+                    console.log("stone1: " + this.stone3);
+                    this.stone4 = Math.floor(Math.random() * 12) + 1;
+                    console.log("stone1: " + this.stone4);
+
+                    $("#image-1").on("click", function () {
+                        this.score += this.stone1;
+                        console.log(this.score);
+                    });
+
+
+                },
+            }
+            game.startGame();
+        })
+    </script>
+
+</body>
+
+
+</html>

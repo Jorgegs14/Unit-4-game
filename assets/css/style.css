@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: url("../images/dark-grey-terrazzo.png");
+    font-size: 18px;
+}
+
+h1 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#title {
+    background-color: #E64D3B;
+    width: 330px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#instructions {
+    background-color: #ECAB3C;
+    width: 500px;
+    font-weight: bold;
+    padding: 12px;
+    margin: 10px;
+    height: 360px;
+}
+
+#random-number {
+    background-color: #39A869;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    vertical-align: top;
+    color: #561E80;
+    font-size: 40px;
+    padding: 5px;
+    float: left;
+}
+
+.container {
+    background-color: #25B9BF;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+    line-height: 25px;
+    vertical-align: middle;
+}
+.image-wrapper {
+    clear: both;
+}
+
+.stone-image {
+    float: left;
+    width: 130px;
+    height: auto;
+    margin: 10px;
+}
+
+.text-score {
+    color: white;
+    background-color: #52A880;
+    clear: both;
+    margin: 10px;
+    width: 200px;
+    height: 30px;
+    vertical-align: text-bottom;
+    padding: 5px;
+}
+
+.game-score {
+    background-color: #52A880;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    vertical-align: top;
+    color:white;
+    font-size: 40px;
+    padding: 5px;
+    float: left;
+}
